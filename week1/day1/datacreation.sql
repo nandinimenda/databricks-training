@@ -32,3 +32,10 @@ INSERT INTO Employee (emp_id, name, age, salary, department_id, hire_date) VALUE
 (3, 'Bob Brown', 45, 80000.00, 1, '2018-02-12'),
 (4, 'Alice Blue', 25, 45000.00, 3, '2021-03-22'),
 (5, 'Charlie P.', 29, 50000.00, 2, '2019-12-01');
+
+INSERT INTO Project (project_id, name, department_id) VALUES
+(1, 'Project Alpha', 1),
+(2, 'Project Beta', 2),
+(3, 'Project Gamma', 1),
+(4, 'Project Delta', 3),
+(5, 'Project Epsilon', 4);
