@@ -79,3 +79,31 @@ GROUP BY department_id;
 SELECT department_id, AVG(salary) AS average_salary
 FROM Employee
 GROUP BY department_id;
+
+-- 21. Select total salary for each department
+SELECT department_id, SUM(salary) AS total_salary
+FROM Employee
+GROUP BY department_id;
+
+-- 22. Select average age of employees in each department
+SELECT department_id, AVG(age) AS average_age
+FROM Employee
+GROUP BY department_id;
+
+-- 23. Select number of employees hired each year
+SELECT YEAR(hire_date) AS hire_year,
+COUNT(*) AS employee_count
+FROM Employee
+GROUP BY YEAR(hire_date);
+
+-- 24. Select highest salary in each department
+SELECT department_id, MAX(salary) AS highest_salary
+FROM Employee
+GROUP BY department_id;
+
+-- 25. Select department with highest average salary
+SELECT department_id, AVG(salary) AS avg_salary
+FROM Employee
+GROUP BY department_id
+ORDER BY avg_salary DESC
+LIMIT 1;
