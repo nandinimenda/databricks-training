@@ -56,7 +56,7 @@ WHERE hire_date >= '2021-03-01';
 
 -- 15. Select employees hired in the last 2 years
 SELECT * FROM Employee
-WHERE hire_date >= DATE_SUB(CURDATE(), INTERVAL 2 YEAR);
+WHERE hire_date >= '2020-01-01';
 
 -- 16. Select the total salary of all employees
 SELECT SUM(salary) AS total_salary
