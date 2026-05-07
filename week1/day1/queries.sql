@@ -112,7 +112,7 @@ LIMIT 1;
 SELECT department_id, COUNT(*) AS employee_count
 FROM Employee
 GROUP BY department_id
-HAVING COUNT(*) > 2;
+HAVING COUNT(*) >= 2;
 
 -- 27. Departments with average salary above 55000
 SELECT department_id, AVG(salary) AS avg_salary
