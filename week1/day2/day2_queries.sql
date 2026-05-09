@@ -24,6 +24,7 @@ INSERT INTO Employees VALUES
 (114, 'Kavya', 'IT', 97000, 'Hyderabad', 9),
 (115, 'Manoj', 'Finance', 58000, 'Mumbai', 4);
 
+--SELECT
 --1. Display all employee details.
   SELECT * FROM Employees;
 
@@ -40,6 +41,7 @@ INSERT INTO Employees VALUES
 --5. Display employee names and experience.
   SELECT emp_name, experience FROM Employees;
 
+--WHERE
 --6. Find employees with salary greater than 70000.
   SELECT * FROM Employees
   WHERE salary > 70000;
@@ -60,6 +62,7 @@ INSERT INTO Employees VALUES
   SELECT * FROM Employees
   WHERE salary = 52000;
 
+--GROUP BY
 --11. Find total salary department-wise.
   SELECT department, SUM(salary) AS total_salary
   FROM Employees
@@ -85,6 +88,7 @@ INSERT INTO Employees VALUES
   FROM Employees
   GROUP BY department;
 
+--HAVING
 --16. Find departments having more than 3 employees.
   SELECT department, COUNT(*) AS employee_count
   FROM Employees
@@ -115,6 +119,7 @@ INSERT INTO Employees VALUES
   GROUP BY department
   HAVING MAX(salary) > 90000;
 
+--TOP
 --21. Display top 5 highest paid employees.
   SELECT * FROM Employees
   ORDER BY salary DESC
@@ -141,6 +146,7 @@ INSERT INTO Employees VALUES
   ORDER BY salary DESC
   LIMIT 1;
 
+--DISTINCT
 --26. Display distinct department names.
   SELECT DISTINCT department
   FROM Employees;
@@ -161,6 +167,7 @@ INSERT INTO Employees VALUES
   SELECT DISTINCT experience
   FROM Employees;
 
+--COMPARISON OPERATORS
 --31. Find employees with salary >= 80000.
   SELECT * FROM Employees
   WHERE salary >= 80000;
@@ -181,6 +188,7 @@ INSERT INTO Employees VALUES
   SELECT * FROM Employees
   WHERE experience > 5;
 
+--LOGICAL OPERATORS
 --36. Find employees from IT department AND salary greater than 70000.
   SELECT * FROM Employees
   WHERE department = 'IT' AND salary > 70000;
@@ -201,3 +209,65 @@ INSERT INTO Employees VALUES
   SELECT * FROM Employees
   WHERE NOT department = 'Sales';
 
+--IN AND NOT IN
+--41. Find employees working in ('Hyderabad', 'Mumbai').
+  SELECT * FROM Employees
+  WHERE city IN ('Hyderabad', 'Mumbai');
+
+--42. Find employees whose department IN ('IT', 'Finance').
+  SELECT * FROM Employees
+  WHERE department IN ('IT', 'Finance');
+
+--43. Find employees whose city NOT IN ('Chennai', 'Pune').
+  SELECT * FROM Employees
+  WHERE city NOT IN ('Chennai', 'Pune');
+
+--44. Find employees whose salary IN (45000, 75000, 91000).
+  SELECT * FROM Employees
+  WHERE salary IN (45000, 75000, 91000);
+
+--45. Find employees whose department NOT IN ('HR', 'Sales').
+  SELECT * FROM Employees
+  WHERE department NOT IN ('HR', 'Sales');
+
+--BETWEEN
+--46. Find employees with salary BETWEEN 50000 AND 80000.
+  SELECT * FROM Employees
+  WHERE salary BETWEEN 50000 AND 80000;
+
+--47. Find employees with experience BETWEEN 3 AND 6.
+  SELECT * FROM Employees
+  WHERE experience BETWEEN 3 AND 6;
+
+--48. Find employees whose emp_id BETWEEN 105 AND 112.
+  SELECT * FROM Employees
+  WHERE emp_id BETWEEN 105 AND 112;
+
+--49. Find employees with salary NOT BETWEEN 40000 AND 60000.
+  SELECT * FROM Employees
+  WHERE salary NOT BETWEEN 40000 AND 60000;
+
+--50. Find employees with experience BETWEEN 2 AND 4.
+  SELECT * FROM Employees
+  WHERE experience BETWEEN 2 AND 4;
+
+--LIKE OPERATOR
+--51. Find employees whose names start with 'R'.
+  SELECT * FROM Employees
+  WHERE emp_name LIKE 'R%';
+
+--52. Find employees whose names end with 'a'.
+  SELECT * FROM Employees
+  WHERE emp_name LIKE '%a';
+
+--53. Find employees whose names contain 'v'.
+  SELECT * FROM Employees
+  WHERE emp_name LIKE '%v%';
+
+--54. Find employees whose city starts with 'B'.
+  SELECT * FROM Employees
+  WHERE city LIKE 'B%';
+
+--55. Find employees whose department ends with 's'.
+  SELECT * FROM Employees
+  WHERE department LIKE '%s';
