@@ -1,0 +1,7 @@
+SELECT 'Ram'
+UNION
+SELECT 'Sai';
+
+SELECT 'Ram'
+UNION ALL
+SELECT 'Ram';
