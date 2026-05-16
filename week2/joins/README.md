@@ -1,0 +1,8 @@
+# Joins Assignment
+
+Topics:
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL OUTER JOIN
+- SELF JOIN
