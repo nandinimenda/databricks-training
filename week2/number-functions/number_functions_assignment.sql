@@ -1,13 +1,19 @@
-SELECT ABS(-100);
+CREATE TABLE employee_salary (
+emp_id INT PRIMARY KEY,
+emp_name VARCHAR(50),
+base_salary DECIMAL(10,2),
+bonus DECIMAL(10,2),
+tax_percent DECIMAL(5,2),
+experience_years INT
+);
 
-SELECT ROUND(456.789,2);
+INSERT INTO employee_salary VALUES
+(1, 'Karthik', 75000.75, 5000.50, 10.00, 6),
 
-SELECT CEIL(45.12);
+(2, 'Veena', 65000.40, 4000.25, 8.50, 4),
 
-SELECT FLOOR(45.99);
+(3, 'Ravi', 85000.90, 6000.75, 12.00, 8),
 
-SELECT MOD(10,3);
+(4, 'Anil', 70000.10, NULL, 9.00, 5),
 
-SELECT POWER(2,3);
-
-SELECT SQRT(64);
+(5, 'Suresh', 60000.55, 3000.30, 7.50, 3);
